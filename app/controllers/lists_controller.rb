@@ -4,11 +4,11 @@ class ListsController < ApplicationController
 end
 
 def show
-  @lists = List.find(params[:id])
+  @list = List.find(params[:id])
 end
 
 def new
-  @lists = List.new
+  @list = List.new
 end
 
 def create
@@ -25,7 +25,6 @@ def destroy
   @lists = List.find(params[:id])
   @lists.destroy
   redirect_to lists_path, status: :see_other
-
 end
 
 private
