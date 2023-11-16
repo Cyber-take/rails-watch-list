@@ -1,0 +1,9 @@
+<h1>Ma watchliste <%= @lists.name %></h1>
+
+ <p> <%= @lists.name %> </p>
+<p class="notice"><%= notice %></p>
+
+<%= link_to "add movies", new_list_bookmark_path(@lists) %>
+<%= link_to "delete", list_path(@lists), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
+
+ <%= link_to "Back to Home", lists_path %>

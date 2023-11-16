@@ -1,0 +1,10 @@
+<h1>Add a New bookmak<h1>
+
+    <%= render "form" %>
+
+    <%= link_to 'back', bookmaks_path %>
+
+    <%= link_to "Delete",
+    review_path(review),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %>
